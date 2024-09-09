@@ -1,0 +1,21 @@
+<div class="p-grid p-d-flex">
+    <div class="p-col-6">
+      <input type="text" pInputText [(ngModel)]="inputData" />
+    </div>
+    <div class="p-col-6">
+      <p-button (click)="data()" label="Send"></p-button>
+    </div>
+  </div>
+
+  <p><b>{{displayData}}</b></p>
+  
+
+
+
+<h1>Output Component</h1>
+<app-child
+  (messageEvent)="handleMessage($event)"
+  (cityEvent)="handleCity($event)"
+></app-child>
+<p>Received Message: {{ receivedMessage }}</p>
+<p>Received City: {{ selectedCity }}</p>

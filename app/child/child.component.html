@@ -1,0 +1,18 @@
+<p>
+  <b>{{ childMessage }}</b>
+</p>
+
+<button (click)="sendMessage()">Send Message</button>
+
+<div>
+  <p-dropdown
+    [options]="cities"
+    [(ngModel)]="selectedCity1"
+    placeholder="Select a City"
+    optionLabel="name"
+  >
+  </p-dropdown>
+  <button (click)="sendCity()">Send Message</button>
+</div>
+
+{{selectedCity1|json}}
